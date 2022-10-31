@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body {
+           padding:0;
+           max-width:768px;
+           font-family:monserat;
+           background:/*#95fff5*/ /*#ff9595*/ white;
+           /*background-image:
+           linear-gradient(45deg, violet, #ff407e);*/
+        }
+        nav {
+            float:none;
+            width:100vw;
+            height: auto;
+        }
+        ul.nav {
+            background-color:#ff0049;
+            overflow:hidden;
+            position: fixed;
+            padding:5px 0px;
+            top:0;
+            display:flex;
+            list-style-type:none;
+            float:left;
+            /*gap:24px;*/
+            width:100vw;
+            height: 10vh;
+            border-bottom: 5px solid black;
+            border-radius: 0px 0px 0px 0px;
+            z-index:1;
+        }
+        ul.foot {
+            padding:5px 0px;
+            background-color:black;
+            display:flex;
+            list-style-type:none;
+            float:none;
+            justify-content:space-between;
+            width:100vw;
+            height: 10vh;
+            border-radius: 0px 0px 0px 0px;
+        }
+        li, a {
+            color:white;
+            font-size:18px;
+            margin: 0px 0px;
+            margin-top:0px;
+            padding:12px 5px;
+            text-decoration:none;
+            height: auto;
+           
+        }
+        a.foot {
+            color: white;
+            font-size:18px;
+            margin: 0px 5px;
+            margin:0px 15px;
+            padding:10px 5px;
+            text-decoration:none;
+            height: auto;
+        }
+        a:hover{
+            background:white;
+            color:dodgerblue;
+            border-radius:5px;
+        }
+        img.redmi {
+            width:100%;
+            height:100%;
+            margin:0px 5px;
+            border-radius:10px;
+            border:5px solid cyan;
+            box-shadow: 5px 5px 15px 8px grey;
+        }
+        img.redmi1 {
+            width:100%;
+            height:100%;
+            margin:;
+            border-radius:10px;
+            border:5px solid  #00ff00;
+            box-shadow: 5px 5px 15px 8px grey;
+        }
+        
+        div.banner{
+            margin-top:25px;
+            margin-bottom:10px;
+            position:initial;
+            
+            width:fit-content;
+            padding:10px 15px;
+            height:auti; 
+            padding:10px 8px 10px 10px;
+        }
+        div.banner-txt {
+            position:inherit;
+            width:100vw;
+            height:auto;
+            padding:5px;
+            color:black;
+            margin-bottom:15px;
+        }
+        div.rom-cont {
+            width:90vw;
+            height:auto;
+            padding:5px;
+            margin-top:35px;
+            background-color:/*#6affcb*/ /*#00ff81*/ #ffff66; 
+            /*display:flex;
+            overflow:scroll;*/
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 5px 5px 15px 8px grey;
+        }
+        div.rom-cont2 {
+            margin-top:40px;
+            width:90vw;
+            height:auto;
+            padding:5px;
+            /*background-color:fuchsia; 
+            
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 5px 5px 15px 8px grey;*/
+        }
+        .rom-cont2 a:hover {
+            width:90vw;
+            height:20vh;
+            background:none;
+            outline:none;
+        }
+           .rom-cont2 a {
+            color:white;
+            font-size:18px;
+            text-decoration:none;
+            
+        }
+        p.ban {
+            text-indent:55px;
+            text-align:justify;
+            font-size:22px;
+            padding:5px;
+        }
+        span {
+        font-family: Georgia;
+            font-weight:bold;
+            font-size:24px;
+        }
+        h2 {
+            justify:center;
+            text-align: center;
+            margin:20px 0px;
+        }
+        div.rom {
+            width: 50vw;
+            height:28vh;
+            margin: 30px 0px;
+            font-size:25px;
+            font-family:arial;
+            
+            
+        }
+        div.rom1 {
+            width: 85vw;
+            height:20vh;
+            margin: 5px 0px;
+            font-size:20px;
+            font-family:arial;
+            background:orangered;
+            border-radius:20px;
+            padding:13px;
+            box-shadow: 5px 5px 15px 8px grey;
+            display:flex;
+            gap:30px;
+            }
+            
+            .logi{
+                font-weight:bolder;
+                font-size:20px;
+                margin-left:5px;
+                /*padding-left:5px;*/
+                margin-right:15vw;
+                padding:12px 5px;
+                color:yellow;
+                
+            }
+            hr {
+                width:50px;
+                height:6px;
+                border:1px solid grey;
+                border-radius:15px;
+                background:grey;
+                margin-top:10px;
+                margin-bottom:5px;
+               }
+               hr.hr {
+                width:80vw;
+                height:6px;
+                border:1px solid grey;
+                border-radius:15px;
+                /*background:grey;*/
+                background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1));
+                margin-top:10px;
+                margin-bottom:5px;
+               }
+            input {
+                width:90vw;
+                height:50px;
+                position: absolute;
+                top:0;
+                z-index:1;
+                display:block;
+                margin-top:30px;
+                padding:20px 0px;
+            }
+            ul.nab {}
+            img.roms {
+                width:100%;
+                height:100%;
+                border-radius:50%;
+                border:3px solid black;
+                box-shadow: 10px 5px 1px 0px ;
+            }
+            img.romss {
+                width:100%;
+                height:100%;
+                border-radius:10%;
+                border:3px solid black;
+                box-shadow: 10px 8px 1px 0px;            }
+            img.roms1 {
+                width:100px;
+                height:100px;
+                border-radius:50%;
+                border:3px solid white;
+                float:left;
+                margin:0px 5px;
+            }
+            .vend {
+                margin-bottom:30px;
+                padding-top:30px;
+            }
+            p.vend {
+                margin-top:10px;
+                margin-left:0px;
+                font-size:16px;
+                color:white;
+            }
+            div.footsec {
+                background:black;
+                height:30vh;
+            }
+            footer, h2.rec {
+            margin-top:10px;
+                color: white;
+            }
+            .nvis{
+                padding-top:10px;
+            }
+            div.img1{
+                width:85vw;
+                heght:100%;
+                margin-right:12px;
+                
+            }
+            div.img2{
+                width:48%;
+                heght:50%;
+                margin -top:10px;
+                position: absolute;
+                left:10px;
+                top:20px;
+               
+            }
+            div.img3{
+                width:100vw;
+                heght:50vh;
+                /*position: absolute;
+                right:17px;
+                top:400px;*/
+                display:none;
+            }
+            html {
+                scroll-behavior:smooth;
+            }
+            div.not {
+                margin-top:85px;
+            }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <li class="logi">CERTUS®</li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Devs</a></li>
+            <li><a href="#r">About</a></li>
+        </ul>
+    </nav>
+    <center><div class="not"><h1>Xiaomi Redmi 6</h1></div></center>
+       <center><div class="banner">
+           <div class="img1"><img src="Banner.jpg" class="redmi"></div>
+            <!--<div class="img2"><img src="Redmi.jpg" class="redmi1"></div>-->
+            <div class="img3"><img src="R6.jpg" class="redmi1"></div>
+        </div></center>
+        
+    <div class="banner-txt">
+        <p class="ban"><span>Redmi 6</span> is an entry level device released on September 2018. Manufactured by Xiaomi a chinese brand. It is powered by a Helio P22 processor, and a 3000mah Lipo non removable battery. labores pulvinar rhoncus alia cubilia convenire ludus ligula orci ea consul invenire meliore delectus reprehendunt sumo turpis vocibus voluptatibus nihil fringilla iuvaret animal netus detraxit omittam reprimique wisi ponderum tibique voluptaria vix dignissim eos nominavi dicunt.</p>
+    </div>
+    <center><div class="rom-cont">
+        <hr>
+        <h2>Popular Roms</h2>
+        <div class="rom"><img class="romss" src="Pixel.jpg" alt="">Pixel</div><br>
+        <div class="rom"><img class="romss" src="Nad.jpg" alt="">Nusantara</div><br>
+        <div class="rom"><img class="romss" src="Rice.jpg" alt="">Rice Rom</div><br>
+        <div class="rom"><img class="romss" src="Arcane.jpg" alt="">Project Arcana</div><br>
+    </div></center>
+    
+    <center><div class="rom-cont2">
+        <!--<hr class="hr"> -->
+        <h2 class="vend">Vendors and Kernels</h2>
+        <a href=""><div class="rom1"><img class="roms1" src="Miui.png" alt=""><p class="vend">MIUI VENDOR</p></div></a><br>
+        <a href=""><div class="rom1"><img class="roms1" src="Alps.jpg" alt=""><p class="vend">ALPS VENDOR</p></div></a><br>
+        <a href=""><div class="rom1"><img class="roms1" src="Kazuki.jpg" alt=""><p class="vend">KAZUKI KERNEL</p></div></a><br>
+        <a href=""><div class="rom1"><img class="roms1" src="Wulan.jpg" alt=""><p class="vend">WULAN KERNEL</p></div></a>
+        <br>
+    </div></center>
+    
+    <center><div class="footsec">
+        <div class="nvis" id="r"><h2 class="rec">Reach Us</h2>
+    <ul class="foot">
+            <li class="foot"><a href="" class="foot">Facebook</a></li>
+            <li class="foot"><a href="" class="foot">Gmail</a></li>
+            <li class="foot"><a href="" class="foot">Telegram</a></li>
+        </ul>
+    </div>
+    <div>
+        <footer>All Rights Reserved &copy; 2022 | sammythenewbie17</footer>
+    </div>
+    </div></center>
+</body>
+</html>
